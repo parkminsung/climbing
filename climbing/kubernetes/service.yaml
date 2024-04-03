@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: climbing
+  labels:
+    app: climbing
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: climbing

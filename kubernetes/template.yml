@@ -1,0 +1,228 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: climbing
+  labels:
+    app: climbing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: climbing
+  template:
+    metadata:
+      labels:
+        app: climbing
+    spec:
+      containers:
+        - name: climbing
+          image: username/climbing:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: remine
+  labels:
+    app: remine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: remine
+  template:
+    metadata:
+      labels:
+        app: remine
+    spec:
+      containers:
+        - name: remine
+          image: username/remine:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trainingCourse
+  labels:
+    app: trainingCourse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trainingCourse
+  template:
+    metadata:
+      labels:
+        app: trainingCourse
+    spec:
+      containers:
+        - name: trainingCourse
+          image: username/trainingCourse:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification
+  labels:
+    app: notification
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification
+  template:
+    metadata:
+      labels:
+        app: notification
+    spec:
+      containers:
+        - name: notification
+          image: username/notification:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: climbing
+  labels:
+    app: climbing
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: climbing
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: remine
+  labels:
+    app: remine
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: remine
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: trainingCourse
+  labels:
+    app: trainingCourse
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: trainingCourse
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: notification
+  labels:
+    app: notification
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: notification
+
