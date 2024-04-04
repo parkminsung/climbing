@@ -57,6 +57,12 @@ public class TrainingRemine {
 
         */
 
+        TrainingRemine trainingRemine = repository().findByMembershipId(trainingCoursePurchased.getMembershipId());
+        if (trainingRemine != null) {
+            trainingRemine.setStatus("PURCHASE");
+            repository().save(trainingRemine);
+        }
+
         /** Example 2:  finding and process
         
         repository().findById(trainingCoursePurchased.get???()).ifPresent(trainingRemine->{
@@ -82,6 +88,12 @@ public class TrainingRemine {
         repository().save(trainingRemine);
 
         */
+
+        TrainingRemine trainingRemine = repository().findByMembershipId(trainingCourseCancled.getMembershipId());
+        if (trainingRemine != null) {
+            trainingRemine.setStatus("CANCLE");
+            repository().save(trainingRemine);
+        }
 
         /** Example 2:  finding and process
         
