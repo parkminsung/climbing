@@ -56,11 +56,12 @@ public class MembershipRemine {
         repository().save(membershipRemine);
 
         */
-        MembershipRemine membershipRemine = repository().findByMembershipId(climbingMembershipPurchased.getMebershipId());
+        MembershipRemine membershipRemine = repository().findByMembershipId(climbingMembershipPurchased.getMembershipId());
         if (membershipRemine != null) {
             membershipRemine.setStatus("PURCHASE");
+            repository().save(membershipRemine);
         }
-        // repository().findByMembershipId(climbingMembershipPurchased.getMebershipId()).ifPresent(
+        // repository().findByMembershipId(climbingMembershipPurchased.getMembershipId()).ifPresent(
         //     membershipRemine->{
         //         membershipRemine.setStatus("PURCHASE");
         //     }
@@ -97,6 +98,13 @@ public class MembershipRemine {
 
         */
 
+        MembershipRemine membershipRemine = repository().findByMembershipId(climbingMembershipStoped.getMembershipId());
+        if (membershipRemine != null) {
+            membershipRemine.setStatus("STOP");
+            repository().save(membershipRemine);
+        }
+
+
         /** Example 2:  finding and process
         
         repository().findById(climbingMembershipStoped.get???()).ifPresent(membershipRemine->{
@@ -109,33 +117,6 @@ public class MembershipRemine {
         */
 
     }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
-    public static void updateStatus(
-        ClimbingMembershipSuspended climbingMembershipSuspended
-    ) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        MembershipRemine membershipRemine = new MembershipRemine();
-        repository().save(membershipRemine);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(climbingMembershipSuspended.get???()).ifPresent(membershipRemine->{
-            
-            membershipRemine // do something
-            repository().save(membershipRemine);
-
-
-         });
-        */
-
-    }
-    //>>> Clean Arch / Port Method
 
 }
 //>>> DDD / Aggregate Root
