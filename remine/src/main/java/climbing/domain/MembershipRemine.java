@@ -73,7 +73,7 @@ public class MembershipRemine {
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateStatus(
-        ClimbingMembershipCanceled climbingMembershipCanceled
+        ClimbingMembershipStoped climbingMembershipStoped
     ) {
         //implement business logic here:
 
@@ -85,7 +85,7 @@ public class MembershipRemine {
 
         /** Example 2:  finding and process
         
-        repository().findById(climbingMembershipCanceled.get???()).ifPresent(membershipRemine->{
+        repository().findById(climbingMembershipStoped.get???()).ifPresent(membershipRemine->{
             
             membershipRemine // do something
             repository().save(membershipRemine);

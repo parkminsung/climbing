@@ -12,7 +12,7 @@
                 <String label="PurchaseDate" v-model="item.purchaseDate" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="PuchaseCancelDate" v-model="item.puchaseCancelDate" :editMode="editMode" @change="change" />
+                <String label="PurchaseFreezeDate" v-model="item.purchaseFreezeDate" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

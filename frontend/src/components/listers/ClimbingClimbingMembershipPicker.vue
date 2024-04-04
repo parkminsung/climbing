@@ -21,7 +21,7 @@
                                 PurchaseDate :  {{item.purchaseDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                PuchaseCancelDate :  {{item.puchaseCancelDate }}
+                                PurchaseFreezeDate :  {{item.purchaseFreezeDate }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

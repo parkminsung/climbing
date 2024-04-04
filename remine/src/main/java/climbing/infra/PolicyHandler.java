@@ -46,15 +46,15 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='ClimbingMembershipCanceled'"
+        condition = "headers['type']=='ClimbingMembershipStoped'"
     )
-    public void wheneverClimbingMembershipCanceled_UpdateStatus(
-        @Payload ClimbingMembershipCanceled climbingMembershipCanceled
+    public void wheneverClimbingMembershipStoped_UpdateStatus(
+        @Payload ClimbingMembershipStoped climbingMembershipStoped
     ) {
-        ClimbingMembershipCanceled event = climbingMembershipCanceled;
+        ClimbingMembershipStoped event = climbingMembershipStoped;
         System.out.println(
             "\n\n##### listener UpdateStatus : " +
-            climbingMembershipCanceled +
+            climbingMembershipStoped +
             "\n\n"
         );
 

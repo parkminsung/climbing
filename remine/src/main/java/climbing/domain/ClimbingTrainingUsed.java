@@ -12,6 +12,9 @@ import lombok.*;
 public class ClimbingTrainingUsed extends AbstractEvent {
 
     private Long id;
+    private String membershipId;
+    private String remainingTrainingCount;
+    private String status;
 
     public ClimbingTrainingUsed(TrainingRemine aggregate) {
         super(aggregate);

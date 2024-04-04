@@ -12,6 +12,9 @@ import lombok.*;
 public class TrainingCourseOpened extends AbstractEvent {
 
     private Long id;
+    private String trainingCourseId;
+    private String trainingCourseStartTime;
+    private String trainingCourseEndTime;
 
     public TrainingCourseOpened(ClimbingTrainingCourseInfo aggregate) {
         super(aggregate);

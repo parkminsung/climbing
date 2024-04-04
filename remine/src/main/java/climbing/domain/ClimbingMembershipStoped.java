@@ -7,10 +7,9 @@ import lombok.*;
 
 @Data
 @ToString
-public class ClimbingMembershipSuspended extends AbstractEvent {
+public class ClimbingMembershipStoped extends AbstractEvent {
 
     private Long id;
     private String mebershipId;
-    private String remainingMembershipCount;
-    private String status;
+    private String puchaseFreezeDate;
 }

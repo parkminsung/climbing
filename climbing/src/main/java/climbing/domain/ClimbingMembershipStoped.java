@@ -9,18 +9,17 @@ import lombok.*;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class TrainingCourseCanceled extends AbstractEvent {
+public class ClimbingMembershipStoped extends AbstractEvent {
 
     private Long id;
-    private String trainingCourseId;
-    private String trainingCourseStartTime;
-    private String trainingCourseEndTime;
+    private String mebershipId;
+    private String puchaseFreezeDate;
 
-    public TrainingCourseCanceled(ClimbingTrainingCourseInfo aggregate) {
+    public ClimbingMembershipStoped(ClimbingMembership aggregate) {
         super(aggregate);
     }
 
-    public TrainingCourseCanceled() {
+    public ClimbingMembershipStoped() {
         super();
     }
 }

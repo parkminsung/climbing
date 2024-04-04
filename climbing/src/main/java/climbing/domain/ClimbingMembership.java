@@ -1,8 +1,8 @@
 package climbing.domain;
 
 import climbing.ClimbingApplication;
-import climbing.domain.ClimbingMembershipCanceled;
 import climbing.domain.ClimbingMembershipPurchased;
+import climbing.domain.ClimbingMembershipStoped;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -23,14 +23,14 @@ public class ClimbingMembership {
 
     private String purchaseDate;
 
-    private String puchaseCancelDate;
+    private String purchaseFreezeDate;
 
     @PostPersist
     public void onPostPersist() {
-        ClimbingMembershipCanceled climbingMembershipCanceled = new ClimbingMembershipCanceled(
+        ClimbingMembershipStoped climbingMembershipStoped = new ClimbingMembershipStoped(
             this
         );
-        climbingMembershipCanceled.publishAfterCommit();
+        climbingMembershipStoped.publishAfterCommit();
 
         ClimbingMembershipPurchased climbingMembershipPurchased = new ClimbingMembershipPurchased(
             this

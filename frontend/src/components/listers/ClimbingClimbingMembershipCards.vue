@@ -111,7 +111,7 @@
             me.newValue = {
                 'mebershipId': '',
                 'purchaseDate': '',
-                'puchaseCancelDate': '',
+                'purchaseFreezeDate': '',
             }
         },
         methods:{

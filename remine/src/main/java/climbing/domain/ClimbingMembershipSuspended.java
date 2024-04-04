@@ -12,6 +12,9 @@ import lombok.*;
 public class ClimbingMembershipSuspended extends AbstractEvent {
 
     private Long id;
+    private String mebershipId;
+    private String remainingMembershipCount;
+    private String status;
 
     public ClimbingMembershipSuspended(MembershipRemine aggregate) {
         super(aggregate);

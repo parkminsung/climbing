@@ -50,7 +50,7 @@
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MebershipId :  {{data.mebershipId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PurchaseDate :  {{data.purchaseDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ PuchaseCancelDate :  {{data.puchaseCancelDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ PurchaseFreezeDate :  {{data.purchaseFreezeDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -120,7 +120,7 @@
             this.newValue = {
                 'mebershipId': '',
                 'purchaseDate': '',
-                'puchaseCancelDate': '',
+                'purchaseFreezeDate': '',
             }
         },
         methods: {

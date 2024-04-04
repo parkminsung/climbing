@@ -69,7 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "mebershipId", value: "mebershipId" },
                     { text: "purchaseDate", value: "purchaseDate" },
-                    { text: "puchaseCancelDate", value: "puchaseCancelDate" },
+                    { text: "purchaseFreezeDate", value: "purchaseFreezeDate" },
                 ],
             climbingMembership : [],
             newValue: {},
@@ -89,7 +89,7 @@
             this.newValue = {
                 'mebershipId': '',
                 'purchaseDate': '',
-                'puchaseCancelDate': '',
+                'purchaseFreezeDate': '',
             }
         },
         methods: {

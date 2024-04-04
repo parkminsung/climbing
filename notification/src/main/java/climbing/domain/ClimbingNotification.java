@@ -210,7 +210,7 @@ public class ClimbingNotification {
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void alertToUser(
-        ClimbingMembershipCanceled climbingMembershipCanceled
+        ClimbingMembershipStoped climbingMembershipStoped
     ) {
         //implement business logic here:
 
@@ -222,7 +222,7 @@ public class ClimbingNotification {
 
         /** Example 2:  finding and process
         
-        repository().findById(climbingMembershipCanceled.get???()).ifPresent(climbingNotification->{
+        repository().findById(climbingMembershipStoped.get???()).ifPresent(climbingNotification->{
             
             climbingNotification // do something
             repository().save(climbingNotification);
@@ -236,7 +236,7 @@ public class ClimbingNotification {
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void alertToUser(
-        ClimbingMembershipCanceled climbingMembershipCanceled
+        ClimbingMembershipStoped climbingMembershipStoped
     ) {
         //implement business logic here:
 
@@ -248,7 +248,7 @@ public class ClimbingNotification {
 
         /** Example 2:  finding and process
         
-        repository().findById(climbingMembershipCanceled.get???()).ifPresent(climbingNotification->{
+        repository().findById(climbingMembershipStoped.get???()).ifPresent(climbingNotification->{
             
             climbingNotification // do something
             repository().save(climbingNotification);

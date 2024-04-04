@@ -147,15 +147,15 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='ClimbingMembershipCanceled'"
+        condition = "headers['type']=='ClimbingMembershipStoped'"
     )
-    public void wheneverClimbingMembershipCanceled_AlertToUser(
-        @Payload ClimbingMembershipCanceled climbingMembershipCanceled
+    public void wheneverClimbingMembershipStoped_AlertToUser(
+        @Payload ClimbingMembershipStoped climbingMembershipStoped
     ) {
-        ClimbingMembershipCanceled event = climbingMembershipCanceled;
+        ClimbingMembershipStoped event = climbingMembershipStoped;
         System.out.println(
             "\n\n##### listener AlertToUser : " +
-            climbingMembershipCanceled +
+            climbingMembershipStoped +
             "\n\n"
         );
 
@@ -165,15 +165,15 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='ClimbingMembershipCanceled'"
+        condition = "headers['type']=='ClimbingMembershipStoped'"
     )
-    public void wheneverClimbingMembershipCanceled_AlertToUser(
-        @Payload ClimbingMembershipCanceled climbingMembershipCanceled
+    public void wheneverClimbingMembershipStoped_AlertToUser(
+        @Payload ClimbingMembershipStoped climbingMembershipStoped
     ) {
-        ClimbingMembershipCanceled event = climbingMembershipCanceled;
+        ClimbingMembershipStoped event = climbingMembershipStoped;
         System.out.println(
             "\n\n##### listener AlertToUser : " +
-            climbingMembershipCanceled +
+            climbingMembershipStoped +
             "\n\n"
         );
 

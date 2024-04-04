@@ -12,6 +12,8 @@ import lombok.*;
 public class ClimbingMembershipPurchased extends AbstractEvent {
 
     private Long id;
+    private String mebershipId;
+    private String purchaseDate;
 
     public ClimbingMembershipPurchased(ClimbingMembership aggregate) {
         super(aggregate);
