@@ -64,24 +64,6 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='ClimbingMembershipSuspended'"
-    )
-    public void wheneverClimbingMembershipSuspended_UpdateStatus(
-        @Payload ClimbingMembershipSuspended climbingMembershipSuspended
-    ) {
-        ClimbingMembershipSuspended event = climbingMembershipSuspended;
-        System.out.println(
-            "\n\n##### listener UpdateStatus : " +
-            climbingMembershipSuspended +
-            "\n\n"
-        );
-
-        // Sample Logic //
-        MembershipRemine.updateStatus(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='TrainingCoursePurchased'"
     )
     public void wheneverTrainingCoursePurchased_UpdateStatus(

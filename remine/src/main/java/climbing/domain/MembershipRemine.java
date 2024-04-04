@@ -1,7 +1,6 @@
 package climbing.domain;
 
 import climbing.RemineApplication;
-import climbing.domain.ClimbingMembershipSuspended;
 import climbing.domain.ClimbingMembershipUsed;
 import java.time.LocalDate;
 import java.util.Date;
@@ -31,11 +30,6 @@ public class MembershipRemine {
             this
         );
         climbingMembershipUsed.publishAfterCommit();
-
-        ClimbingMembershipSuspended climbingMembershipSuspended = new ClimbingMembershipSuspended(
-            this
-        );
-        climbingMembershipSuspended.publishAfterCommit();
     }
 
     public static MembershipRemineRepository repository() {
@@ -86,32 +80,6 @@ public class MembershipRemine {
         /** Example 2:  finding and process
         
         repository().findById(climbingMembershipStoped.get???()).ifPresent(membershipRemine->{
-            
-            membershipRemine // do something
-            repository().save(membershipRemine);
-
-
-         });
-        */
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
-    public static void updateStatus(
-        ClimbingMembershipSuspended climbingMembershipSuspended
-    ) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        MembershipRemine membershipRemine = new MembershipRemine();
-        repository().save(membershipRemine);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(climbingMembershipSuspended.get???()).ifPresent(membershipRemine->{
             
             membershipRemine // do something
             repository().save(membershipRemine);
