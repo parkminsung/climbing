@@ -16,7 +16,7 @@
         </v-card-title >        
 
         <v-card-text>
-            <String label="MebershipId" v-model="value.mebershipId" :editMode="editMode" :inputUI="''"/>
+            <String label="MembershipId" v-model="value.membershipId" :editMode="editMode" :inputUI="''"/>
             <String label="RemainingMembershipCount" v-model="value.remainingMembershipCount" :editMode="editMode" :inputUI="''"/>
             <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
         </v-card-text>

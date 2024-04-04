@@ -12,7 +12,7 @@ import lombok.*;
 public class ClimbingMembershipSuspended extends AbstractEvent {
 
     private Long id;
-    private String mebershipId;
+    private String membershipId;
     private String remainingMembershipCount;
     private String status;
 
