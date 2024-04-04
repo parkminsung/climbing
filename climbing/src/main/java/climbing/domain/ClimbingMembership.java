@@ -19,7 +19,7 @@ public class ClimbingMembership {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String mebershipId;
+    private String membershipId;
 
     private String purchaseDate;
 

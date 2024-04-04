@@ -15,7 +15,7 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                MebershipId :  {{item.mebershipId }}
+                                MembershipId :  {{item.membershipId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 PurchaseDate :  {{item.purchaseDate }}

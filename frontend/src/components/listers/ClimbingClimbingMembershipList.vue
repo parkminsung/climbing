@@ -48,7 +48,7 @@
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ MebershipId :  {{data.mebershipId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MembershipId :  {{data.membershipId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PurchaseDate :  {{data.purchaseDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PurchaseFreezeDate :  {{data.purchaseFreezeDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
@@ -118,7 +118,7 @@
             this.values = temp.data._embedded.climbingmemberships;
             
             this.newValue = {
-                'mebershipId': '',
+                'membershipId': '',
                 'purchaseDate': '',
                 'purchaseFreezeDate': '',
             }

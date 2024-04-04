@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "mebershipId", value: "mebershipId" },
+                    { text: "membershipId", value: "membershipId" },
                     { text: "remainingMembershipCount", value: "remainingMembershipCount" },
                     { text: "status", value: "status" },
                 ],
@@ -87,7 +87,7 @@
             this.values = temp.data._embedded.membershipremines;
 
             this.newValue = {
-                'mebershipId': '',
+                'membershipId': '',
                 'remainingMembershipCount': '',
                 'status': '',
             }

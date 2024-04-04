@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "mebershipId", value: "mebershipId" },
+                    { text: "membershipId", value: "membershipId" },
                     { text: "purchaseDate", value: "purchaseDate" },
                     { text: "purchaseFreezeDate", value: "purchaseFreezeDate" },
                 ],
@@ -87,7 +87,7 @@
             this.values = temp.data._embedded.climbingmemberships;
 
             this.newValue = {
-                'mebershipId': '',
+                'membershipId': '',
                 'purchaseDate': '',
                 'purchaseFreezeDate': '',
             }

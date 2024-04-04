@@ -109,7 +109,7 @@
             me.values = temp.data._embedded.membershipRemines;
             
             me.newValue = {
-                'mebershipId': '',
+                'membershipId': '',
                 'remainingMembershipCount': '',
                 'status': '',
             }

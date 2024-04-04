@@ -109,7 +109,7 @@
             me.values = temp.data._embedded.climbingMemberships;
             
             me.newValue = {
-                'mebershipId': '',
+                'membershipId': '',
                 'purchaseDate': '',
                 'purchaseFreezeDate': '',
             }

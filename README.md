@@ -35,12 +35,12 @@ mvn spring-boot:run
 ## Test by API
 - climbing
 ```
- http :8088/climbingMemberships id="id" mebershipId="mebershipId" purchaseDate="purchaseDate" purchaseFreezeDate="purchaseFreezeDate" 
+ http :8088/climbingMemberships id="id" membershipId="membershipId" purchaseDate="purchaseDate" purchaseFreezeDate="purchaseFreezeDate" 
  http :8088/climbingTrainingCourseTickets id="id" trainingCourseId="trainingCourseId" trainingCourseStartTime="trainingCourseStartTime" trainingCourseEndTime="trainingCourseEndTime" membershipId="membershipId" 
 ```
 - remine
 ```
- http :8088/membershipRemines id="id" mebershipId="mebershipId" remainingMembershipCount="remainingMembershipCount" status="status" 
+ http :8088/membershipRemines id="id" membershipId="membershipId" remainingMembershipCount="remainingMembershipCount" status="status" 
  http :8088/trainingRemines id="id" membershipId="membershipId" remainingTrainingCount="remainingTrainingCount" status="status" 
 ```
 - trainingCourse
