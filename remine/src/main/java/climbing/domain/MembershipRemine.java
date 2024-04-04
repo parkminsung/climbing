@@ -1,7 +1,6 @@
 package climbing.domain;
 
 import climbing.RemineApplication;
-import climbing.domain.ClimbingMembershipSuspended;
 import climbing.domain.ClimbingMembershipUsed;
 import java.time.LocalDate;
 import java.util.Date;
@@ -31,11 +30,6 @@ public class MembershipRemine {
             this
         );
         climbingMembershipUsed.publishAfterCommit();
-
-        ClimbingMembershipSuspended climbingMembershipSuspended = new ClimbingMembershipSuspended(
-            this
-        );
-        climbingMembershipSuspended.publishAfterCommit();
     }
 
     public static MembershipRemineRepository repository() {
@@ -117,6 +111,7 @@ public class MembershipRemine {
         */
 
     }
+    //>>> Clean Arch / Port Method
 
 }
 //>>> DDD / Aggregate Root

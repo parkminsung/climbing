@@ -158,32 +158,6 @@ public class ClimbingNotification {
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void alertToUser(
-        ClimbingMembershipSuspended climbingMembershipSuspended
-    ) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        ClimbingNotification climbingNotification = new ClimbingNotification();
-        repository().save(climbingNotification);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(climbingMembershipSuspended.get???()).ifPresent(climbingNotification->{
-            
-            climbingNotification // do something
-            repository().save(climbingNotification);
-
-
-         });
-        */
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
-    public static void alertToUser(
         ClimbingMembershipPurchased climbingMembershipPurchased
     ) {
         //implement business logic here:
