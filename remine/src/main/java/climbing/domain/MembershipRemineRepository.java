@@ -10,4 +10,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
     path = "membershipRemines"
 )
 public interface MembershipRemineRepository
-    extends PagingAndSortingRepository<MembershipRemine, Long> {}
+    extends PagingAndSortingRepository<MembershipRemine, Long> {
+        MembershipRemine findByMembershipId(String string);
+    }

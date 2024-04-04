@@ -56,6 +56,15 @@ public class MembershipRemine {
         repository().save(membershipRemine);
 
         */
+        MembershipRemine membershipRemine = repository().findByMembershipId(climbingMembershipPurchased.getMebershipId());
+        if (membershipRemine != null) {
+            membershipRemine.setStatus("PURCHASE");
+        }
+        // repository().findByMembershipId(climbingMembershipPurchased.getMebershipId()).ifPresent(
+        //     membershipRemine->{
+        //         membershipRemine.setStatus("PURCHASE");
+        //     }
+        // );
 
         /** Example 2:  finding and process
         
@@ -66,7 +75,12 @@ public class MembershipRemine {
 
 
          });
-        */
+        private void ifPresent(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'ifPresent'");
+    }
+
+*/
 
     }
 
