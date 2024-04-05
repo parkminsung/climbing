@@ -125,8 +125,8 @@ public class MembershipRemine {
         */
 
         MembershipRemine membershipRemine = repository().findByMembershipId(climbingMembershipUsed.getMembershipId());
-        if (membershipRemine != null) {
-            membershipRemine.setRemainingMembershipCount(null);
+        if (membershipRemine != null && climbingMembershipUsed != null && climbingMembershipUsed.getRemainingMembershipCount() != 0) {
+            membershipRemine.setRemainingMembershipCount(climbingMembershipUsed.getRemainingMembershipCount() - 1);
             repository().save(membershipRemine);
         }
 
