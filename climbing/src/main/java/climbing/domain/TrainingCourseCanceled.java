@@ -11,6 +11,6 @@ public class TrainingCourseCanceled extends AbstractEvent {
 
     private Long id;
     private String trainingCourseId;
-    private String trainingCourseStartTime;
-    private String trainingCourseEndTime;
+    private Date trainingCourseStartTime;
+    private Date trainingCourseEndTime;
 }

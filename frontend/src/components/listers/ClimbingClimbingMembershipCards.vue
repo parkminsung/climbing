@@ -112,6 +112,7 @@
                 'membershipId': '',
                 'purchaseDate': '2024-04-05',
                 'purchaseFreezeDate': '2024-04-05',
+                'membershipUseDate': '2024-04-05',
             }
         },
         methods:{

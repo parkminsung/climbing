@@ -14,6 +14,9 @@
             <div>
                 <Date label="PurchaseFreezeDate" v-model="item.purchaseFreezeDate" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Date label="MembershipUseDate" v-model="item.membershipUseDate" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>
