@@ -13,7 +13,7 @@ public class ClimbingMembershipUsed extends AbstractEvent {
 
     private Long id;
     private String membershipId;
-    private String remainingMembershipCount;
+    private Long remainingMembershipCount;
     private String status;
 
     public ClimbingMembershipUsed(MembershipRemine aggregate) {
