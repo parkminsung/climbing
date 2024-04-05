@@ -128,6 +128,8 @@ public class MembershipRemine {
         if (membershipRemine != null && climbingMembershipUsed != null && membershipRemine.getRemainingMembershipCount() > 0) {
             membershipRemine.setRemainingMembershipCount(membershipRemine.getRemainingMembershipCount() - 1);
             repository().save(membershipRemine);
+        }else{
+            RemainingMembershipCountDecreased remainingMembershipCountDecreased = new RemainingMembershipCountDecreased();
         }
 
 
