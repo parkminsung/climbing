@@ -106,6 +106,12 @@ public class TrainingRemine {
 
         */
 
+        TrainingRemine trainingRemine = repository().findByMembershipId(climbingTrainingUsed.getMembershipId());
+        if (trainingRemine != null && climbingTrainingUsed != null && trainingRemine.getRemainingTrainingCount() > 0) {
+            trainingRemine.setRemainingTrainingCount(trainingRemine.getRemainingTrainingCount() - 1);
+            repository().save(trainingRemine);
+        }
+
         /** Example 2:  finding and process
         
         repository().findById(climbingTrainingUsed.get???()).ifPresent(trainingRemine->{
