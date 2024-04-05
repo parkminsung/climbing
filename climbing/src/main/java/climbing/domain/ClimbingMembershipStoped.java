@@ -13,7 +13,7 @@ public class ClimbingMembershipStoped extends AbstractEvent {
 
     private Long id;
     private String membershipId;
-    private String puchaseFreezeDate;
+    private Date puchaseFreezeDate;
 
     public ClimbingMembershipStoped(ClimbingMembership aggregate) {
         super(aggregate);

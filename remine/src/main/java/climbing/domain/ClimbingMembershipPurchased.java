@@ -11,5 +11,5 @@ public class ClimbingMembershipPurchased extends AbstractEvent {
 
     private Long id;
     private String membershipId;
-    private String purchaseDate;
+    private Date purchaseDate;
 }

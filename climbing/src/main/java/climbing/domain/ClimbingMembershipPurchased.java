@@ -13,7 +13,7 @@ public class ClimbingMembershipPurchased extends AbstractEvent {
 
     private Long id;
     private String membershipId;
-    private String purchaseDate;
+    private Date purchaseDate;
 
     public ClimbingMembershipPurchased(ClimbingMembership aggregate) {
         super(aggregate);

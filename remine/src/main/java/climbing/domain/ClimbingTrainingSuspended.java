@@ -13,7 +13,7 @@ public class ClimbingTrainingSuspended extends AbstractEvent {
 
     private Long id;
     private String membershipId;
-    private String remainingTrainingCount;
+    private Long remainingTrainingCount;
     private String status;
 
     public ClimbingTrainingSuspended(TrainingRemine aggregate) {
