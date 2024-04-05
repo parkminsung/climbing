@@ -1,6 +1,7 @@
 package climbing.domain;
 
 import climbing.RemineApplication;
+import climbing.domain.ReminingTrainingCountDecreased;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -22,6 +23,14 @@ public class TrainingRemine {
     private Long remainingTrainingCount;
 
     private String status;
+
+    @PostUpdate
+    public void onPostUpdate() {
+        ReminingTrainingCountDecreased reminingTrainingCountDecreased = new ReminingTrainingCountDecreased(
+            this
+        );
+        reminingTrainingCountDecreased.publishAfterCommit();
+    }
 
     public static TrainingRemineRepository repository() {
         TrainingRemineRepository trainingRemineRepository = RemineApplication.applicationContext.getBean(
@@ -92,6 +101,8 @@ public class TrainingRemine {
         TrainingRemine trainingRemine = new TrainingRemine();
         repository().save(trainingRemine);
 
+        ReminingTrainingCountDecreased reminingTrainingCountDecreased = new ReminingTrainingCountDecreased(trainingRemine);
+        reminingTrainingCountDecreased.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -101,6 +112,8 @@ public class TrainingRemine {
             trainingRemine // do something
             repository().save(trainingRemine);
 
+            ReminingTrainingCountDecreased reminingTrainingCountDecreased = new ReminingTrainingCountDecreased(trainingRemine);
+            reminingTrainingCountDecreased.publishAfterCommit();
 
          });
         */
