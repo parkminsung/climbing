@@ -1,6 +1,7 @@
 package climbing.domain;
 
 import climbing.ClimbingApplication;
+import climbing.domain.ClimbingTrainingUsed;
 import climbing.domain.TrainingCourseCancled;
 import climbing.domain.TrainingCoursePurchased;
 import java.time.LocalDate;
@@ -27,8 +28,15 @@ public class ClimbingTrainingCourseTicket {
 
     private String membershipId;
 
+    private Date trainingUseDate;
+
     @PostPersist
     public void onPostPersist() {
+        ClimbingTrainingUsed climbingTrainingUsed = new ClimbingTrainingUsed(
+            this
+        );
+        climbingTrainingUsed.publishAfterCommit();
+
         TrainingCoursePurchased trainingCoursePurchased = new TrainingCoursePurchased(
             this
         );

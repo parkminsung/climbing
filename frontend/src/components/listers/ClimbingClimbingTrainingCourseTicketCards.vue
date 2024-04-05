@@ -113,6 +113,7 @@
                 'trainingCourseStartTime': '2024-04-05',
                 'trainingCourseEndTime': '2024-04-05',
                 'membershipId': '',
+                'trainingUseDate': '2024-04-05',
             }
         },
         methods:{

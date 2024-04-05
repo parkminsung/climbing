@@ -20,6 +20,7 @@
             <Date label="TrainingCourseStartTime" v-model="value.trainingCourseStartTime" :editMode="editMode" :inputUI="''"/>
             <Date label="TrainingCourseEndTime" v-model="value.trainingCourseEndTime" :editMode="editMode" :inputUI="''"/>
             <String label="MembershipId" v-model="value.membershipId" :editMode="editMode" :inputUI="''"/>
+            <Date label="TrainingUseDate" v-model="value.trainingUseDate" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
@@ -33,6 +34,13 @@
                 수정
             </v-btn>
             <div v-else>
+                <v-btn
+                    color="primary"
+                    text
+                    @click="save"
+                >
+                    Use
+                </v-btn>
                 <v-btn
                     color="primary"
                     text

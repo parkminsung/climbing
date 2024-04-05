@@ -37,14 +37,7 @@
                     text
                     @click="save"
                 >
-                    Use
-                </v-btn>
-                <v-btn
-                    color="primary"
-                    text
-                    @click="save"
-                >
-                    Suspend
+                저장
                 </v-btn>
                 <v-btn
                     color="primary"

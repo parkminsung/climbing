@@ -17,6 +17,9 @@
             <div>
                 <String label="MembershipId" v-model="item.membershipId" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Date label="TrainingUseDate" v-model="item.trainingUseDate" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>
