@@ -178,23 +178,5 @@ public class PolicyHandler {
         // Sample Logic //
         ClimbingNotification.alertToUser(event);
     }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='ClimbingTrainingSuspended'"
-    )
-    public void wheneverClimbingTrainingSuspended_AlertToUser(
-        @Payload ClimbingTrainingSuspended climbingTrainingSuspended
-    ) {
-        ClimbingTrainingSuspended event = climbingTrainingSuspended;
-        System.out.println(
-            "\n\n##### listener AlertToUser : " +
-            climbingTrainingSuspended +
-            "\n\n"
-        );
-
-        // Sample Logic //
-        ClimbingNotification.alertToUser(event);
-    }
 }
 //>>> Clean Arch / Inbound Adaptor

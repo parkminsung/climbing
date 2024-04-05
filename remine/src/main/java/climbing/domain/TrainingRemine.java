@@ -1,8 +1,6 @@
 package climbing.domain;
 
 import climbing.RemineApplication;
-import climbing.domain.ClimbingTrainingSuspended;
-import climbing.domain.ClimbingTrainingUsed;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -24,19 +22,6 @@ public class TrainingRemine {
     private Long remainingTrainingCount;
 
     private String status;
-
-    @PostPersist
-    public void onPostPersist() {
-        ClimbingTrainingUsed climbingTrainingUsed = new ClimbingTrainingUsed(
-            this
-        );
-        climbingTrainingUsed.publishAfterCommit();
-
-        ClimbingTrainingSuspended climbingTrainingSuspended = new ClimbingTrainingSuspended(
-            this
-        );
-        climbingTrainingSuspended.publishAfterCommit();
-    }
 
     public static TrainingRemineRepository repository() {
         TrainingRemineRepository trainingRemineRepository = RemineApplication.applicationContext.getBean(
@@ -86,6 +71,32 @@ public class TrainingRemine {
         /** Example 2:  finding and process
         
         repository().findById(trainingCourseCancled.get???()).ifPresent(trainingRemine->{
+            
+            trainingRemine // do something
+            repository().save(trainingRemine);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void decreaseRemainingTrainingCount(
+        ClimbingTrainingUsed climbingTrainingUsed
+    ) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        TrainingRemine trainingRemine = new TrainingRemine();
+        repository().save(trainingRemine);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(climbingTrainingUsed.get???()).ifPresent(trainingRemine->{
             
             trainingRemine // do something
             repository().save(trainingRemine);

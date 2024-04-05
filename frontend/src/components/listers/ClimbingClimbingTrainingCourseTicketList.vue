@@ -45,6 +45,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -53,6 +54,7 @@
                             [ TrainingCourseStartTime :  {{data.trainingCourseStartTime }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ TrainingCourseEndTime :  {{data.trainingCourseEndTime }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MembershipId :  {{data.membershipId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TrainingUseDate :  {{data.trainingUseDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -124,6 +126,7 @@
                 'trainingCourseStartTime': '2024-04-05',
                 'trainingCourseEndTime': '2024-04-05',
                 'membershipId': '',
+                'trainingUseDate': '2024-04-05',
             }
         },
         methods: {

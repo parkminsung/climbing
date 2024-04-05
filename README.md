@@ -36,7 +36,7 @@ mvn spring-boot:run
 - climbing
 ```
  http :8088/climbingMemberships id="id" membershipId="membershipId" purchaseDate="purchaseDate" purchaseFreezeDate="purchaseFreezeDate" membershipUseDate="membershipUseDate" 
- http :8088/climbingTrainingCourseTickets id="id" trainingCourseId="trainingCourseId" trainingCourseStartTime="trainingCourseStartTime" trainingCourseEndTime="trainingCourseEndTime" membershipId="membershipId" 
+ http :8088/climbingTrainingCourseTickets id="id" trainingCourseId="trainingCourseId" trainingCourseStartTime="trainingCourseStartTime" trainingCourseEndTime="trainingCourseEndTime" membershipId="membershipId" trainingUseDate="trainingUseDate" 
 ```
 - remine
 ```
