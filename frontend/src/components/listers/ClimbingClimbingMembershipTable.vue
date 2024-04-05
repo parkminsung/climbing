@@ -70,6 +70,7 @@
                     { text: "membershipId", value: "membershipId" },
                     { text: "purchaseDate", value: "purchaseDate" },
                     { text: "purchaseFreezeDate", value: "purchaseFreezeDate" },
+                    { text: "membershipUseDate", value: "membershipUseDate" },
                 ],
             climbingMembership : [],
             newValue: {},
@@ -90,6 +91,7 @@
                 'membershipId': '',
                 'purchaseDate': '2024-04-05',
                 'purchaseFreezeDate': '2024-04-05',
+                'membershipUseDate': '2024-04-05',
             }
         },
         methods: {

@@ -1,7 +1,6 @@
 package climbing.domain;
 
 import climbing.RemineApplication;
-import climbing.domain.ClimbingMembershipUsed;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -23,14 +22,6 @@ public class MembershipRemine {
     private Long remainingMembershipCount;
 
     private String status;
-
-    @PostPersist
-    public void onPostPersist() {
-        ClimbingMembershipUsed climbingMembershipUsed = new ClimbingMembershipUsed(
-            this
-        );
-        climbingMembershipUsed.publishAfterCommit();
-    }
 
     public static MembershipRemineRepository repository() {
         MembershipRemineRepository membershipRemineRepository = RemineApplication.applicationContext.getBean(
@@ -134,6 +125,32 @@ public class MembershipRemine {
         /** Example 2:  finding and process
         
         repository().findById(climbingMembershipStoped.get???()).ifPresent(membershipRemine->{
+            
+            membershipRemine // do something
+            repository().save(membershipRemine);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void decreaseRemainingMembershipCount(
+        ClimbingMembershipUsed climbingMembershipUsed
+    ) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        MembershipRemine membershipRemine = new MembershipRemine();
+        repository().save(membershipRemine);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(climbingMembershipUsed.get???()).ifPresent(membershipRemine->{
             
             membershipRemine // do something
             repository().save(membershipRemine);

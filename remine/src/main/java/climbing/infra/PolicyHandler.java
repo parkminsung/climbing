@@ -97,5 +97,23 @@ public class PolicyHandler {
         // Sample Logic //
         TrainingRemine.updateStatus(event);
     }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='ClimbingMembershipUsed'"
+    )
+    public void wheneverClimbingMembershipUsed_DecreaseRemainingMembershipCount(
+        @Payload ClimbingMembershipUsed climbingMembershipUsed
+    ) {
+        ClimbingMembershipUsed event = climbingMembershipUsed;
+        System.out.println(
+            "\n\n##### listener DecreaseRemainingMembershipCount : " +
+            climbingMembershipUsed +
+            "\n\n"
+        );
+
+        // Sample Logic //
+        MembershipRemine.decreaseRemainingMembershipCount(event);
+    }
 }
 //>>> Clean Arch / Inbound Adaptor

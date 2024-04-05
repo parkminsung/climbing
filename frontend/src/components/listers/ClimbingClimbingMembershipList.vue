@@ -44,6 +44,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -51,6 +52,7 @@
                             [ MembershipId :  {{data.membershipId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PurchaseDate :  {{data.purchaseDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PurchaseFreezeDate :  {{data.purchaseFreezeDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MembershipUseDate :  {{data.membershipUseDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -121,6 +123,7 @@
                 'membershipId': '',
                 'purchaseDate': '2024-04-05',
                 'purchaseFreezeDate': '2024-04-05',
+                'membershipUseDate': '2024-04-05',
             }
         },
         methods: {

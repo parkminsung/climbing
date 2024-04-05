@@ -19,6 +19,7 @@
             <String label="MembershipId" v-model="value.membershipId" :editMode="editMode" :inputUI="''"/>
             <Date label="PurchaseDate" v-model="value.purchaseDate" :editMode="editMode" :inputUI="''"/>
             <Date label="PurchaseFreezeDate" v-model="value.purchaseFreezeDate" :editMode="editMode" :inputUI="''"/>
+            <Date label="MembershipUseDate" v-model="value.membershipUseDate" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
@@ -45,6 +46,13 @@
                     @click="save"
                 >
                     Freeze
+                </v-btn>
+                <v-btn
+                    color="primary"
+                    text
+                    @click="save"
+                >
+                    Use
                 </v-btn>
                 <v-btn
                     color="primary"

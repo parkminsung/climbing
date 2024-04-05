@@ -23,6 +23,9 @@
                             <v-list-item-subtitle>
                                 PurchaseFreezeDate :  {{item.purchaseFreezeDate }}
                             </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                MembershipUseDate :  {{item.membershipUseDate }}
+                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
@@ -74,6 +77,8 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
                     
                     
                     

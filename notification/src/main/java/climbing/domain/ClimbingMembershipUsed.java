@@ -11,6 +11,5 @@ public class ClimbingMembershipUsed extends AbstractEvent {
 
     private Long id;
     private String membershipId;
-    private Long remainingMembershipCount;
-    private String status;
+    private Date membershipUseDate;
 }

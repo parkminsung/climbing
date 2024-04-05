@@ -37,7 +37,7 @@
                     text
                     @click="save"
                 >
-                    Use
+                저장
                 </v-btn>
                 <v-btn
                     color="primary"
