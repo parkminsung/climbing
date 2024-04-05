@@ -9,7 +9,7 @@
                 <String label="MembershipId" v-model="item.membershipId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="RemainingMembershipCount" v-model="item.remainingMembershipCount" :editMode="editMode" @change="change" />
+                <Number label="RemainingMembershipCount" v-model="item.remainingMembershipCount" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />

@@ -17,8 +17,8 @@
 
         <v-card-text>
             <String label="MembershipId" v-model="value.membershipId" :editMode="editMode" :inputUI="''"/>
-            <String label="PurchaseDate" v-model="value.purchaseDate" :editMode="editMode" :inputUI="''"/>
-            <String label="PurchaseFreezeDate" v-model="value.purchaseFreezeDate" :editMode="editMode" :inputUI="''"/>
+            <Date label="PurchaseDate" v-model="value.purchaseDate" :editMode="editMode" :inputUI="''"/>
+            <Date label="PurchaseFreezeDate" v-model="value.purchaseFreezeDate" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>

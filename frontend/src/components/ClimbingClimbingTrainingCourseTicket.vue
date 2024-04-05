@@ -17,8 +17,8 @@
 
         <v-card-text>
             <String label="TrainingCourseId" v-model="value.trainingCourseId" :editMode="editMode" :inputUI="''"/>
-            <String label="TrainingCourseStartTime" v-model="value.trainingCourseStartTime" :editMode="editMode" :inputUI="''"/>
-            <String label="TrainingCourseEndTime" v-model="value.trainingCourseEndTime" :editMode="editMode" :inputUI="''"/>
+            <Date label="TrainingCourseStartTime" v-model="value.trainingCourseStartTime" :editMode="editMode" :inputUI="''"/>
+            <Date label="TrainingCourseEndTime" v-model="value.trainingCourseEndTime" :editMode="editMode" :inputUI="''"/>
             <String label="MembershipId" v-model="value.membershipId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 

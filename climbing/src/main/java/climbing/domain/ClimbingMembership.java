@@ -21,9 +21,9 @@ public class ClimbingMembership {
 
     private String membershipId;
 
-    private String purchaseDate;
+    private Date purchaseDate;
 
-    private String purchaseFreezeDate;
+    private Date purchaseFreezeDate;
 
     @PostPersist
     public void onPostPersist() {
