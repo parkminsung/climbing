@@ -110,7 +110,7 @@
             
             me.newValue = {
                 'membershipId': '',
-                'remainingMembershipCount': '',
+                'remainingMembershipCount': 0,
                 'status': '',
             }
         },

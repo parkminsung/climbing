@@ -119,8 +119,8 @@
             
             this.newValue = {
                 'membershipId': '',
-                'purchaseDate': '',
-                'purchaseFreezeDate': '',
+                'purchaseDate': '2024-04-05',
+                'purchaseFreezeDate': '2024-04-05',
             }
         },
         methods: {

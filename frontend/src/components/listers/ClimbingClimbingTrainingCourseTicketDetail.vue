@@ -9,10 +9,10 @@
                 <String label="TrainingCourseId" v-model="item.trainingCourseId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="TrainingCourseStartTime" v-model="item.trainingCourseStartTime" :editMode="editMode" @change="change" />
+                <Date label="TrainingCourseStartTime" v-model="item.trainingCourseStartTime" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="TrainingCourseEndTime" v-model="item.trainingCourseEndTime" :editMode="editMode" @change="change" />
+                <Date label="TrainingCourseEndTime" v-model="item.trainingCourseEndTime" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="MembershipId" v-model="item.membershipId" :editMode="editMode" @change="change" />

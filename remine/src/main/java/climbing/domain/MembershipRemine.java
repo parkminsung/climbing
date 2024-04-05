@@ -20,7 +20,7 @@ public class MembershipRemine {
 
     private String membershipId;
 
-    private String remainingMembershipCount;
+    private Long remainingMembershipCount;
 
     private String status;
 

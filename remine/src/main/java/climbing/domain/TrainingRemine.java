@@ -21,7 +21,7 @@ public class TrainingRemine {
 
     private String membershipId;
 
-    private String remainingTrainingCount;
+    private Long remainingTrainingCount;
 
     private String status;
 

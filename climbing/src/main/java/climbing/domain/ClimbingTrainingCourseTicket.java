@@ -21,9 +21,9 @@ public class ClimbingTrainingCourseTicket {
 
     private String trainingCourseId;
 
-    private String trainingCourseStartTime;
+    private Date trainingCourseStartTime;
 
-    private String trainingCourseEndTime;
+    private Date trainingCourseEndTime;
 
     private String membershipId;
 

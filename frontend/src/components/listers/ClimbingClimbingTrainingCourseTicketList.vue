@@ -121,8 +121,8 @@
             
             this.newValue = {
                 'trainingCourseId': '',
-                'trainingCourseStartTime': '',
-                'trainingCourseEndTime': '',
+                'trainingCourseStartTime': '2024-04-05',
+                'trainingCourseEndTime': '2024-04-05',
                 'membershipId': '',
             }
         },

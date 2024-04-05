@@ -88,7 +88,7 @@
 
             this.newValue = {
                 'membershipId': '',
-                'remainingTrainingCount': '',
+                'remainingTrainingCount': 0,
                 'status': '',
             }
         },
