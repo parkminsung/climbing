@@ -113,5 +113,37 @@ public class MembershipRemine {
     }
     //>>> Clean Arch / Port Method
 
+    public static void decreaseRemainingMembershipCount(
+        ClimbingMembershipUsed climbingMembershipUsed
+    ) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        MembershipRemine membershipRemine = new MembershipRemine();
+        repository().save(membershipRemine);
+
+        */
+
+        MembershipRemine membershipRemine = repository().findByMembershipId(climbingMembershipUsed.getMembershipId());
+        if (membershipRemine != null) {
+            membershipRemine.setRemainingMembershipCount(null);
+            repository().save(membershipRemine);
+        }
+
+
+        /** Example 2:  finding and process
+        
+        repository().findById(climbingMembershipStoped.get???()).ifPresent(membershipRemine->{
+            
+            membershipRemine // do something
+            repository().save(membershipRemine);
+
+
+         });
+        */
+
+    }
+    //>>> Clean Arch / Port Method
+
 }
 //>>> DDD / Aggregate Root
